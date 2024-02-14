@@ -17,6 +17,8 @@ import Registro from './Componentes/Registro.jsx';
 import PokemonGame from './Componentes/PokemonGame.jsx';
 import PrivateRoute from './Componentes/PrivateRoute.jsx';
 import Foter from './Componentes/Foter.jsx'; 
+import Error404 from './Componentes/Error404.jsx';
+
 const router = createBrowserRouter([
     {
         element:(
@@ -54,7 +56,12 @@ const router = createBrowserRouter([
                         <PokemonGame />
                     </PrivateRoute>
                 ),
+            },
+            {
+                path: "*",
+                element: <Error404></Error404>,
             }
+
         ]
     }
 ]);
