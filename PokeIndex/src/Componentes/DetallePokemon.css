@@ -1,0 +1,112 @@
+/* Estilos modificados para la distribución de DetallesPokemon */
+
+.DetallesPokemonContainer {
+    width: 70%;
+    margin: 5%;
+    margin-left: 12%;
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .DetallesPokemonLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .DetallesPokemonRight {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .DetallesPokemonLoading {
+    font-size: 24px;
+    color: #555;
+  }
+  
+  .DetallesPokemonTitle {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff6600; /* Naranja */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .DetallesPokemonImage {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 1s ease-in-out;
+  }
+  
+  .DetallesPokemonInfo {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .DetallesPokemonSectionTitle {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ff6600; /* Naranja */
+  }
+  
+  .DetallesPokemonTypeList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .DetallesPokemonTypeItem {
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #ffcc00; /* Amarillo claro */
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .DetallesPokemonTypeItem:hover {
+    transform: scale(1.1);
+  }
+  
+  .DetallesPokemonChart {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .tipoDetalles{
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+  }
+  

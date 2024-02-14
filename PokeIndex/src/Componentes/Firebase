@@ -1,0 +1,25 @@
+ // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+// Your web app's Firebase configuration
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDjv8rFtveOasZxvLwoVlTeCIYit8Qh9tg",
+  authDomain: "pokeindex.firebaseapp.com",
+  projectId: "pokeindex",
+  storageBucket: "pokeindex.appspot.com",
+  messagingSenderId: "698792041829",
+  appId: "1:698792041829:web:584a064e37836b30a6158c"
+};
+ 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication and get a reference to the service
+export const auth = getAuth(app);
+
+export const db = getFirestore(app);

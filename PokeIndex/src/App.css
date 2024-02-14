@@ -1,0 +1,178 @@
+/* HTML: <div class="loader"></div> */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #414141;
+  --c2: #bebebe;
+  --c3: #ffffff;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+
+
+
+}
+.loader {
+  margin: 0 auto; 
+  margin-top: 20%;
+  height: 60px;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transform-origin: bottom;
+}
+
+.loader::after {
+  background: radial-gradient(at 75% 15%,#fffb,#0000 35%),
+    radial-gradient(at 80% 40%,#0000,#0008),
+    radial-gradient(circle  5px,#fff 94%,#0000),
+    radial-gradient(circle 10px,#000 94%,#0000),
+    linear-gradient(#F93318 0 0) top   /100% calc(50% - 5px),
+    linear-gradient(#fff    0 0) bottom/100% calc(50% - 5px)
+    #000;
+  background-repeat: no-repeat;
+  animation: l20 1s infinite cubic-bezier(0.5,120,0.5,-120);
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #dcb437;
+  padding: 10px 0;
+}
+header ul{
+  display: flex;
+  gap: 20px;
+  
+  padding: 0;
+  margin: 0;
+
+}
+header nav{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header ul li{
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header ul li:hover{
+  background: #000;
+  color: #fff;
+}
+header ul li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header ul li a:hover{
+  background: #000;
+  color: #fff;
+}
+
+.loader::before {
+  background: #ddd;
+  filter: blur(8px);
+  transform: scaleY(0.4) translate(-13px, 0px);
+}
+
+@keyframes l20 {
+ 
+  30%,70% {
+    transform: rotate(0deg)
+  }
+
+  49.99% {
+    transform: rotate(0.2deg)
+  }
+
+  50% {
+    transform: rotate(-0.2deg)
+  }
+}
+
+
+
+.App-header {
+  border-radius: 8px;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.pokeball-icon {
+  height: 150px; /* Tamaño más grande */
+  width: 150px; /* Tamaño más grande */
+  margin: 20px;
+}
+
+.start-button {
+  background-color: #f8d030;
+  color: #282c34;
+  padding: 15px 30px; /* Botón más grande */
+  border: none;
+  border-radius: 8px; /* Bordes más redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #dcb437;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 2rem; 
+}
+
+footer {
+  margin-top: 20px;
+  bottom: 0;
+  background-color: #dcb437;
+  color: white;
+  text-align: center;
+  padding: 5px;
+
+}
