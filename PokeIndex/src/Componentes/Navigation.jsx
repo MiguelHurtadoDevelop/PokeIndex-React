@@ -81,7 +81,7 @@ function Navigation(){
         return (
             <>
                 <header>
-                    <h1>PokeIndex</h1>
+                    <Link to="/"><img src="https://fontmeme.com/permalink/240214/134efef193be9ab4e0b14e0a09a14717.png" alt="fuente-pokemon" border="0"/></Link>
                     
                     <nav>
                         <ul>
